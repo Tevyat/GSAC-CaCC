@@ -257,6 +257,7 @@ plt.ylabel('Average Overall Rating')
 
 plt.show()
 --------------------------------------------------------------------------------------
+
 Type of Traveller
 Business          2.868583
 Couple Leisure    2.920245
@@ -274,5 +275,69 @@ Solo Leisure      3.127702
 
 &nbsp;
 
-* Which traveler type reports the highest satisfaction?
 * Are there differences in satisfaction between airlines? Which airlines are rated highest or lowest?
+
+```python
+groups = [group["Overall Rating"].values for _, group in df.groupby("Airline")]
+f_stat, p_value = stats.f_oneway(*groups)
+
+print(f"F-statistic: {f_stat:.2f}")
+print(f"P-value: {p_value}")
+
+if p_value < 0.05:
+    print("There are significant differences in overall ratings between airlines (reject H0).")
+else:
+    print("There are no significant differences in overall ratings between airlines (fail to reject H0).")
+
+-----------------------------------------------------------------------------------------------------------------
+
+F-statistic: 187.69
+P-value: 4.272953032511568e-185
+There are significant differences in overall ratings between airlines (reject H0).
+```
+
+ANOVA one-way test was used to test if there were significant differences in the overall ratings between each airline. As we can see, the test produced an F-statistic of 187.69, which indicates a large difference between the groups (airlines) compared to the variance within each group. Since the p-value is less than 0.05, we reject the null hypothesis, concluding that there are significant differences in the overall ratings between the airlines, meaning some airlines have notably different satisfaction scores from others.
+
+```python
+from statsmodels.stats.multicomp import pairwise_tukeyhsd
+
+tukey_results = pairwise_tukeyhsd(df['Overall Rating'], df['Airline'])
+
+print(tukey_results)
+
+--------------------------------------------------------------------------
+
+                Multiple Comparison of Means - Tukey HSD, FWER=0.05                 
+====================================================================================
+        group1                 group2         meandiff p-adj   lower   upper  reject
+------------------------------------------------------------------------------------
+            Air France Cathay Pacific Airways   0.6376    0.0  0.3959  0.8794   True
+            Air France               Emirates   -0.064 0.9564 -0.2767  0.1488  False
+            Air France          Qatar Airways   1.0702    0.0  0.8674   1.273   True
+            Air France     Singapore Airlines    0.838    0.0  0.6124  1.0636   True
+            Air France       Turkish Airlines  -0.4638    0.0 -0.6676 -0.2599   True
+Cathay Pacific Airways               Emirates  -0.7016    0.0 -0.9199 -0.4832   True
+Cathay Pacific Airways          Qatar Airways   0.4326    0.0  0.2239  0.6413   True
+Cathay Pacific Airways     Singapore Airlines   0.2004 0.1322 -0.0306  0.4313  False
+Cathay Pacific Airways       Turkish Airlines  -1.1014    0.0 -1.3111 -0.8917   True
+              Emirates          Qatar Airways   1.1342    0.0  0.9599  1.3084   True
+              Emirates     Singapore Airlines   0.9019    0.0  0.7016  1.1023   True
+              Emirates       Turkish Airlines  -0.3998    0.0 -0.5753 -0.2243   True
+         Qatar Airways     Singapore Airlines  -0.2322 0.0065  -0.422 -0.0425   True
+         Qatar Airways       Turkish Airlines   -1.534    0.0 -1.6973 -1.3707   True
+    Singapore Airlines       Turkish Airlines  -1.3018    0.0 -1.4927 -1.1109   True
+------------------------------------------------------------------------------------
+```
+
+To further see the difference within the airlines, the Tukey HSD (Honestly Significant Difference) is used. This test test is a statistical method used after an ANOVA to compare all possible pairs of group means. Its purpose is to determine which airlines differ significantly in their means, and to account for the issue of inflated Type 1 errors (false positives) by adjusting p-values when performing multiple comparisons.
+
+Significant Differences 
+* Qatar Airways vs. Air France
+* Cathay Pacific vs. Turkish Airlines).
+Non-significant Differences
+* Air France vs. Emirates
+
+<p align=center><img src=https://github.com/user-attachments/assets/d875a2f6-4bda-44bf-91b4-69b0bf9cc4ac><br>
+<strong>Figure 4.3</strong></p>
+
+This boxplot shows the variance and median of the Overall Rating of each Airline. What we are looking for here is a high median (the line that is seen inside the box) and low variance (small box). With these characteristics in mind, we can conclude that Qatar Airways is judged to be the highest rated airline, as it has a high median and low variance. Meanwhile, the passengers have judged Turkish Airline to be the worst airline as it has the lowest median and moderate variance.
