@@ -71,3 +71,15 @@ This line excludes rows where the airline is one of the following: All Nippon Ai
 df['Overall Rating'] = MinMaxScaler(feature_range=(1, 5)).fit_transform(df[['Overall Rating']])
 ```
 This step normalizes the Overall Rating column, which has ratings between 1 and 10. The MinMaxScaler from the sklearn.preprocessing library scales the ratings to a new range of 1 to 5. This was done to match the scale of the other ratings.
+
+&nbsp;
+
+```python
+print(df.isnull().sum())
+```
+Lastly, this line checks the sum of null values from each column. This returned a total of 0 null values for each column.
+
+&nbsp;
+
+# ANALYZE
+
