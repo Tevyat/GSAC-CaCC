@@ -246,8 +246,9 @@ This suggests that "Value for Money" significantly influences the overall rating
 
 * Do ratings vary significantly between people flying for leisure (solo, couple, or with family) and those flying for business?
 
-<p align=center><img src=https://github.com/user-attachments/assets/c15e557b-7858-48c8-92e0-f78cba4c499b)><br>
+<p align=center><img src=https://github.com/user-attachments/assets/2a33b21c-ce83-4e08-b3b7-16f2887ced0f><br>
 <strong>Figure 4.2</strong></p>
+
 
 * Solo Leisure travelers gave the highest average rating (3.13), indicating greater satisfaction.
 * Couple Leisure and Business travelers provided similar, moderately high ratings (2.92 and 2.87, respectively).
