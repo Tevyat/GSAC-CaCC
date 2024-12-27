@@ -1,6 +1,6 @@
 # GSAC-CaCC
 
-### ASK
+## ASK
 
 "The customer is always right, in matters of taste." This quote though popularized during the 1990s, is still passed around to this day, especially in industries where customer satisfaction can make or break a business. Within the aviation industry, the satisfaction of the passengers plays big role in shaping the reputation of an airline. This case study looks at these reviews to find patterns in what passenger’s value most and how airlines can improve their services. Specifically, this case study hopes to answer the following questions:
 
