@@ -216,4 +216,18 @@ min           1.000000        1.000000
 25%           2.000000        3.000000  
 50%           4.000000        7.000000  
 75%           5.000000        9.000000  
-max           5.000000       10.000000  ```
+max           5.000000       10.000000
+```
+&nbsp;
+
+To answer the research questions from the beginning, we will be using data visualization with the Pandas module from the Python programming language.
+
+```python
+correlation_matrix = df[['Seat Comfort', 'Staff Service', 'Food & Beverages', 
+                         'Inflight Entertainment', 'Value For Money', 'Overall Rating']].corr()
+                         
+plt.figure(figsize=(8, 6))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt='.2f', linewidths=0.5)
+plt.title('Correlation Matrix with Normalized Overall Rating')
+plt.show()
+```
