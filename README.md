@@ -224,7 +224,7 @@ To answer the research questions from the beginning, we will be using data visua
 
 &nbsp;
 
-* What factors (Seat Comfort, Staff Service, Food & Beverages, etc.) have the most significant impact on the overall rating of the passenger?
+### What factors (Seat Comfort, Staff Service, Food & Beverages, etc.) have the most significant impact on the overall rating of the passenger?
 ```python
 correlation_matrix = df[['Seat Comfort', 'Staff Service', 'Food & Beverages', 
                          'Inflight Entertainment', 'Value For Money', 'Overall Rating']].corr()
@@ -244,7 +244,7 @@ This suggests that "Value for Money" significantly influences the overall rating
 
 &nbsp;
 
-* Do ratings vary significantly between people flying for leisure (solo, couple, or with family) and those flying for business?
+### Do ratings vary significantly between people flying for leisure (solo, couple, or with family) and those flying for business?
 ```python
 type_ratings = df.groupby('Type of Traveller')['Overall Rating'].mean()
 print(type_ratings)
@@ -275,7 +275,7 @@ Solo Leisure      3.127702
 
 &nbsp;
 
-* Are there differences in satisfaction between airlines? Which airlines are rated highest or lowest?
+### Are there differences in satisfaction between airlines? Which airlines are rated highest or lowest?
 
 ```python
 groups = [group["Overall Rating"].values for _, group in df.groupby("Airline")]
@@ -331,11 +331,11 @@ Cathay Pacific Airways       Turkish Airlines  -1.1014    0.0 -1.3111 -0.8917   
 
 To further see the difference within the airlines, the Tukey HSD (Honestly Significant Difference) is used. This test test is a statistical method used after an ANOVA to compare all possible pairs of group means. Its purpose is to determine which airlines differ significantly in their means, and to account for the issue of inflated Type 1 errors (false positives) by adjusting p-values when performing multiple comparisons.
 
-Significant Differences 
+<p>Significant Differences 
 * Qatar Airways vs. Air France
-* Cathay Pacific vs. Turkish Airlines).
+* Cathay Pacific vs. Turkish Airlines) <br>
 Non-significant Differences
-* Air France vs. Emirates
+* Air France vs. Emirates</p>
 
 <p align=center><img src=https://github.com/user-attachments/assets/d875a2f6-4bda-44bf-91b4-69b0bf9cc4ac><br>
 <strong>Figure 4.3</strong></p>
