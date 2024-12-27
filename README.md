@@ -335,8 +335,9 @@ To further see the difference within the airlines, the Tukey HSD (Honestly Signi
 <p>Significant Differences 
 <ul> 
 <li>Qatar Airways vs. Air France</li>
-<li>Cathay Pacific vs. Turkish Airlines</li> </ul><br>
-<ul>Non-significant Differences
+<li>Cathay Pacific vs. Turkish Airlines</li> </ul>
+<ul>
+Non-significant Differences
 <li>Air France vs. Emirates</li>
 </ul></p>
 
