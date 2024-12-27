@@ -245,6 +245,24 @@ This suggests that "Value for Money" significantly influences the overall rating
 &nbsp;
 
 * Do ratings vary significantly between people flying for leisure (solo, couple, or with family) and those flying for business?
+```python
+type_ratings = df.groupby('Type of Traveller')['Overall Rating'].mean()
+print(type_ratings)
+
+sns.barplot(x='Type of Traveller', y='Overall Rating', data=df, estimator='mean')
+
+plt.title('Average Overall Rating by Type of Traveller')
+plt.xlabel('Type of Traveller')
+plt.ylabel('Average Overall Rating')
+
+plt.show()
+--------------------------------------------------------------------------------------
+Type of Traveller
+Business          2.868583
+Couple Leisure    2.920245
+Family Leisure    2.651728
+Solo Leisure      3.127702
+```
 
 <p align=center><img src=https://github.com/user-attachments/assets/2a33b21c-ce83-4e08-b3b7-16f2887ced0f><br>
 <strong>Figure 4.2</strong></p>
