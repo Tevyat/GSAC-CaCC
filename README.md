@@ -52,7 +52,7 @@ This line filters the dataset to include only reviews that are marked as "verifi
 &nbsp;
 
 ```python
-df = df.drop(["Title", "Name", "Review Date", "Verified", "Reviews", "Route", "Class", "Recommended"], axis=1)
+df = df.drop(["Title", "Name", "Review Date", "Verified", "Month Flown", "Reviews", "Route", "Class", "Recommended"], axis=1)
 ```
 These columns are considered irrelevant for the current analysis, so they are removed to streamline the dataset.
 
@@ -81,3 +81,144 @@ Lastly, this line checks the sum of null values from each column. This returned 
 
 # ANALYZE
 
+### Descriptive Statistics
+
+This showcases the descriptive statistics for the categorical data within the dataset.
+
+```python
+Type of Traveller       Business  Couple Leisure  Family Leisure  Solo Leisure
+Airline                                                                       
+Air France                   123             179              72           240
+Cathay Pacific Airways        88             129              97           251
+Emirates                     178             243             216           360
+Qatar Airways                228             288             204           591
+Singapore Airlines           113             209             150           279
+Turkish Airlines             244             256             280           489
+```
+
+This showcases the descriptive statistics for the numerical data within the dataset.
+```python
+Singapore Airlines:
+       Seat Comfort  Staff Service  Food & Beverages  Inflight Entertainment  \
+count    751.000000     751.000000        751.000000              751.000000   
+mean       3.668442       3.902796          3.536618                3.882823   
+std        1.307640       1.399002          1.426765                1.172853   
+min        1.000000       1.000000          1.000000                1.000000   
+25%        3.000000       3.000000          2.000000                3.000000   
+50%        4.000000       5.000000          4.000000                4.000000   
+75%        5.000000       5.000000          5.000000                5.000000   
+max        5.000000       5.000000          5.000000                5.000000   
+
+       Value For Money  Overall Rating  
+count       751.000000      751.000000  
+mean          3.452730        6.549933  
+std           1.509115        3.276966  
+min           1.000000        1.000000  
+25%           2.000000        4.000000  
+50%           4.000000        8.000000  
+75%           5.000000        9.000000  
+max           5.000000       10.000000  
+
+Qatar Airways:
+       Seat Comfort  Staff Service  Food & Beverages  Inflight Entertainment  \
+count   1311.000000    1311.000000       1311.000000             1311.000000   
+mean       3.955759       4.291381          3.932876                4.130435   
+std        1.241593       1.140742          1.258283                1.023650   
+min        1.000000       1.000000          1.000000                1.000000   
+25%        3.000000       4.000000          3.000000                4.000000   
+50%        4.000000       5.000000          4.000000                4.000000   
+75%        5.000000       5.000000          5.000000                5.000000   
+max        5.000000       5.000000          5.000000                5.000000   
+
+       Value For Money  Overall Rating  
+count      1311.000000     1311.000000  
+mean          3.711670        7.072464  
+std           1.394376        3.171692  
+min           1.000000        1.000000  
+25%           3.000000        5.000000  
+50%           4.000000        8.000000  
+75%           5.000000       10.000000  
+max           5.000000       10.000000  
+
+UAE (Emirates):
+       Seat Comfort  Staff Service  Food & Beverages  Inflight Entertainment  \
+count    997.000000     997.000000        997.000000              997.000000   
+mean       3.128385       2.939819          2.950853                3.670010   
+std        1.396196       1.595170          1.463955                1.355649   
+min        1.000000       1.000000          1.000000                1.000000   
+25%        2.000000       1.000000          2.000000                3.000000   
+50%        3.000000       3.000000          3.000000                4.000000   
+75%        4.000000       5.000000          4.000000                5.000000   
+max        5.000000       5.000000          5.000000                5.000000   
+
+       Value For Money  Overall Rating  
+count       997.000000      997.000000  
+mean          2.674022        4.520562  
+std           1.506031        3.287867  
+min           1.000000        1.000000  
+25%           1.000000        1.000000  
+50%           2.000000        4.000000  
+75%           4.000000        8.000000  
+max           5.000000       10.000000  
+
+Turkish Airlines:
+       Seat Comfort  Staff Service  Food & Beverages  Inflight Entertainment  \
+count   1269.000000    1269.000000       1269.000000             1269.000000   
+mean       2.747045       2.879433          2.972419                3.092199   
+std        1.361886       1.523360          1.476962                1.419838   
+min        1.000000       1.000000          1.000000                1.000000   
+25%        1.000000       1.000000          2.000000                2.000000   
+50%        3.000000       3.000000          3.000000                3.000000   
+75%        4.000000       4.000000          4.000000                4.000000   
+max        5.000000       5.000000          5.000000                5.000000   
+
+       Value For Money  Overall Rating  
+count      1269.000000     1269.000000  
+mean          2.375099        3.620961  
+std           1.554847        3.240210  
+min           1.000000        1.000000  
+25%           1.000000        1.000000  
+50%           2.000000        2.000000  
+75%           4.000000        7.000000  
+max           5.000000       10.000000  
+
+Air France:
+       Seat Comfort  Staff Service  Food & Beverages  Inflight Entertainment  \
+count    614.000000     614.000000        614.000000              614.000000   
+mean       2.920195       3.298046          3.094463                3.174267   
+std        1.370327       1.558253          1.465493                1.372269   
+min        1.000000       1.000000          1.000000                1.000000   
+25%        2.000000       2.000000          2.000000                2.000000   
+50%        3.000000       4.000000          3.000000                3.000000   
+75%        4.000000       5.000000          4.000000                4.000000   
+max        5.000000       5.000000          5.000000                5.000000   
+
+       Value For Money  Overall Rating  
+count       614.000000      614.000000  
+mean          2.672638        4.664495  
+std           1.617200        3.539773  
+min           1.000000        1.000000  
+25%           1.000000        1.000000  
+50%           2.000000        3.000000  
+75%           4.000000        8.000000  
+max           5.000000       10.000000  
+\Cathay Pacific Airways:
+       Seat Comfort  Staff Service  Food & Beverages  Inflight Entertainment  \
+count    565.000000     565.000000        565.000000              565.000000   
+mean       3.598230       3.596460          3.175221                3.789381   
+std        1.313999       1.464711          1.440088                1.199835   
+min        1.000000       1.000000          1.000000                1.000000   
+25%        3.000000       2.000000          2.000000                3.000000   
+50%        4.000000       4.000000          3.000000                4.000000   
+75%        5.000000       5.000000          4.000000                5.000000   
+max        5.000000       5.000000          5.000000                5.000000   
+
+       Value For Money  Overall Rating  
+count       565.000000      565.000000  
+mean          3.320354        6.099115  
+std           1.489333        3.243775  
+min           1.000000        1.000000  
+25%           2.000000        3.000000  
+50%           4.000000        7.000000  
+75%           5.000000        9.000000  
+max           5.000000       10.000000  ```
