@@ -4,7 +4,6 @@
 
 * What factors (Seat Comfort, Staff Service, Food & Beverages, etc.) have the most significant impact on the overall rating of the passenger?
 * Do ratings vary significantly between people flying for leisure (solo, couple, or with family) and those flying for business?
-* Which traveler type reports the highest satisfaction?
 * Are there differences in satisfaction between airlines? Which airlines are rated highest or lowest?
   
 &nbsp;  
@@ -74,7 +73,7 @@ Lastly, this line checks the sum of null values from each column. This returned 
 
 &nbsp;
 
-# ANALYZE
+## ANALYZE
 
 ### Descriptive Statistics
 
@@ -334,12 +333,22 @@ Cathay Pacific Airways       Turkish Airlines  -1.1014    0.0 -1.3111 -0.8917   
 To further see the difference within the airlines, the Tukey HSD (Honestly Significant Difference) is used. This test test is a statistical method used after an ANOVA to compare all possible pairs of group means. Its purpose is to determine which airlines differ significantly in their means, and to account for the issue of inflated Type 1 errors (false positives) by adjusting p-values when performing multiple comparisons.
 
 <p>Significant Differences 
-* Qatar Airways vs. Air France
-* Cathay Pacific vs. Turkish Airlines) <br>
-Non-significant Differences
-* Air France vs. Emirates</p>
+<ul> 
+<li>Qatar Airways vs. Air France</li>
+<li>Cathay Pacific vs. Turkish Airlines</li> </ul><br>
+<ul>Non-significant Differences
+<li>Air France vs. Emirates</li>
+</ul></p>
 
 <p align=center><img src=https://github.com/user-attachments/assets/d875a2f6-4bda-44bf-91b4-69b0bf9cc4ac><br>
 <strong>Figure 4.3</strong></p>
 
 This boxplot shows the variance and median of the Overall Rating of each Airline. What we are looking for here is a high median (the line that is seen inside the box) and low variance (small box). With these characteristics in mind, we can conclude that Qatar Airways is judged to be the highest rated airline, as it has a high median and low variance. Meanwhile, the passengers have judged Turkish Airline to be the worst airline as it has the lowest median and moderate variance.
+
+&nbsp;
+
+## SHARE
+
+&nbsp;
+
+## ACT
