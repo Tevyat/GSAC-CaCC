@@ -237,9 +237,11 @@ plt.show()
 <p align=center><img src=https://github.com/user-attachments/assets/2f5f7662-829d-4136-aba9-7b36fcadac03><br>
 <strong>Figure 4.1</strong></p>
 As can be seen from this heatmap, 
-* Value for Money has the strongest correlation with the overall rating (0.89).
-* Staff Service also shows a moderate positive correlation (0.21).
-* Other factors, including Seat Comfort, Food & Beverages, and Inflight Entertainment, have weaker correlations with the overall rating (0.19, 0.16, and 0.15 respectively).
+<ul>
+<li>Value for Money has the strongest correlation with the overall rating (0.89).</li>
+<li>Staff Service also shows a moderate positive correlation (0.21).</li>
+<li>Other factors, including Seat Comfort, Food & Beverages, and Inflight Entertainment, have weaker correlations with the overall rating (0.19, 0.16, and 0.15 respectively).</li>
+</ul> 
 This suggests that "Value for Money" significantly influences the overall rating compared to other factors.
 
 &nbsp;
