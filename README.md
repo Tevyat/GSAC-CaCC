@@ -232,8 +232,8 @@ sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt='.2f', linewidt
 plt.title('Correlation Matrix with Normalized Overall Rating')
 plt.show()
 ```
-![image](https://github.com/user-attachments/assets/2f5f7662-829d-4136-aba9-7b36fcadac03)
-### Figure 4.1
+<p align=center><img src=https://github.com/user-attachments/assets/2f5f7662-829d-4136-aba9-7b36fcadac03>
+Figure 4.1 </p>
 As can be seen from this heatmap, 
 * Value for Money has the strongest correlation with the overall rating (0.89).
 * Staff Service also shows a moderate positive correlation (0.21).
