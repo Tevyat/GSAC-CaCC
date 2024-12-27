@@ -1,11 +1,9 @@
 # GSAC-CaCC
 
 This case study was done as part of a requirement for the Google Data Analytics Professional Certificate, Course 8: Google Data Analytics Capstone: Complete a Case Study.
-
-
-
+&nbsp;  
   ## ASK
-
+&nbsp;  
 "The customer is always right, in matters of taste." This quote though popularized during the 1990s, is still passed around to this day, especially in industries where customer satisfaction can make or break a business. Within the aviation industry, the satisfaction of the passengers plays big role in shaping the reputation of an airline. This case study looks at these reviews to find patterns in what passenger’s value most and how airlines can improve their services. Specifically, this case study hopes to answer the following questions:
 
 * What factors (Seat Comfort, Staff Service, Food & Beverages, etc.) have the most significant impact on the overall rating of the passenger?
@@ -14,9 +12,9 @@ This case study was done as part of a requirement for the Google Data Analytics 
 * Do ratings vary significantly between people flying for leisure (solo or with family) and those flying for business?
 * Which traveler type reports the highest satisfaction?
 * Are there differences in satisfaction between airlines? Which airlines are rated highest or lowest?
-
+&nbsp;  
 ## PREPARE
-
+&nbsp;  
 The dataset used was taken from Kaggle, named **“Airlines Review Dataset”** by user **“Elijah Alabi”**. It contains customer reviews for the top 10 rated airlines in 2023, including Singapore Airlines, Qatar Airways, ANA (All Nippon Airways), Emirates, Japan Airlines, Turkish Airlines, Air France, Cathay Pacific Airways, EVA Air, and Korean Air. It provides insights into passenger satisfaction and service quality aspects, ranging from seat comfort to inflight entertainment. The dataset consists of 8,100 reviews with 17 columns, including both numerical and categorical data. These are the columns:
 - Title: Title of the review.
 - Name: Name of the reviewer.
@@ -36,4 +34,5 @@ The dataset used was taken from Kaggle, named **“Airlines Review Dataset”** 
 - Overall Rating: Overall rating for the flight (1-10).
 - Recommended: Whether the reviewer recommends the airline (yes/no)
 
-(Source)[https://www.kaggle.com/datasets/elijahconnectng/airlines-review-dataset]
+[Source](https://www.kaggle.com/datasets/elijahconnectng/airlines-review-dataset)
+&nbsp;  
