@@ -222,6 +222,7 @@ max           5.000000       10.000000
 
 To answer the research questions from the beginning, we will be using data visualization with the Pandas module from the Python programming language.
 
+* What factors (Seat Comfort, Staff Service, Food & Beverages, etc.) have the most significant impact on the overall rating of the passenger?
 ```python
 correlation_matrix = df[['Seat Comfort', 'Staff Service', 'Food & Beverages', 
                          'Inflight Entertainment', 'Value For Money', 'Overall Rating']].corr()
@@ -231,3 +232,16 @@ sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt='.2f', linewidt
 plt.title('Correlation Matrix with Normalized Overall Rating')
 plt.show()
 ```
+![image](https://github.com/user-attachments/assets/2f5f7662-829d-4136-aba9-7b36fcadac03)
+### Figure 4.1
+As can be seen from this heatmap, 
+* Value for Money has the strongest correlation with the overall rating (0.89).
+* Staff Service also shows a moderate positive correlation (0.21).
+* Other factors, including Seat Comfort, Food & Beverages, and Inflight Entertainment, have weaker correlations with the overall rating (0.19, 0.16, and 0.15 respectively).
+This suggests that "Value for Money" significantly influences the overall rating compared to other factors.
+
+&nbsp;
+
+* Do ratings vary significantly between people flying for leisure (solo, couple, or with family) and those flying for business?
+* Which traveler type reports the highest satisfaction?
+* Are there differences in satisfaction between airlines? Which airlines are rated highest or lowest?
