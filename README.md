@@ -353,3 +353,11 @@ This boxplot shows the variance and median of the Overall Rating of each Airline
 &nbsp;
 
 ## ACT
+
+### Conclusion
+"Value for Money" has the highest impact over the overall ratings, with a strong correlation (0.89), while Staff Service shows a moderate impact (0.21). Seat Comfort, Food & Beverages, and Inflight Entertainment have lower impact. Solo Leisure travelers are the most satisfied with an average of 3.13 for their overall rating, while Family Leisure travelers are the least satisfied (2.65). Qatar Airways leads with a high median and low variance in ratings, while Turkish Airlines has the lowest median and moderate variance, showing room for improvement.
+
+&nbsp;
+
+### Recommendations
+Airlines should work on offering better "Value for Money" through fair pricing and package deals. They should improve family-friendly services to increase the satisfaction of those traveling with family for leisure. Upgrading inflight comfort and amenities can also help. Qatar Airways should keep up its good work, while Turkish Airlines needs to address issues and listen to passenger feedback.
